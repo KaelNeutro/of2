@@ -6,71 +6,72 @@ session_start();//session starts here
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- Bootstrap--> 
-         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS--> 
+	<link type="text/css" rel="stylesheet" href="..\css\style.css">
+	<link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
+	<!-- Bootstrap--> 
+	
+	<link href="..\bootstrap\css\bootstrapCDN.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-         <!-- Jquery--> 
-         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-         <script src="..\js\jquery.min.js"></script>
-         <script src="..\js\function.js"></script>
-         <!-- CSS--> 
-         <link type="text/css" rel="stylesheet" href="..\css\style.css">
-         <link type="text/css" rel="stylesheet" href="..\bootstrap\css\bootstrap.css">
-         <link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
-    <!-- Angular -->
-    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
-    <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
+	<!-- Jquery--> 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="..\js\jquery.min.js"></script>
+	<script src="..\js\function.js"></script>
+
+	<!-- Angular -->
+	<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+	<script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
 
 	<title>Register Students</title>
 </head>
 <body id="rgSTD">
 	<div class="container"> <!-- FORMULARIO DE REGISTRO DE ESTUDANTES-->
-		           <div class="row">
-               <div class="center-align">
-                  <ul class="nav ">
-                     <li><a href="#">Home</a></li> 
+		<div class="row">
+			<div class="center-align">
+				<ul class="nav ">
+					<li><a href="#">Home</a></li> 
 
 
-                     <li><a href="#">Students</a>
-                        <ul class ="sub">
-                           <li><a href="reg_std.php"> Register </a></li> 
-                           <li><a href="alter_std.php"> Alter Data</a></li>
-                           <li><a href="view_std.php"> View or Remove </a></li>
-                        </ul>
-                     </li>
+					<li><a href="#">Students</a>
+						<ul class ="sub">
+							<li><a href="reg_std.php"> Register </a></li> 
+							<li><a href="alter_std.php"> Alter Data</a></li>
+							<li><a href="view_std.php"> View or Remove </a></li>
+						</ul>
+					</li>
 
 
-                     <li><a href="#">Vacancies</a>
-                        <ul class ="sub">
-                           <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
-                           <li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
-                           <li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
-                           <li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
-                           <li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
-                        </ul>
-                     </li> 
+					<li><a href="#">Vacancies</a>
+						<ul class ="sub">
+							<li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
+							<li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
+							<li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
+							<li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
+							<li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
+						</ul>
+					</li> 
 
 
-                     <li><a href="#">User</a>
-                        <ul class ="sub">
-                           <li><a href="alter_u.php" > Edit Account </a></li> 
-                           <li><a href="delfulluser.php"> Remove Account </a></li>
+					<li><a href="#">User</a>
+						<ul class ="sub">
+							<li><a href="alter_u.php" > Edit Account </a></li> 
+							<li><a href="delfulluser.php"> Remove Account </a></li>
 
-                        </ul> 
-                     </li>
+						</ul> 
+					</li>
 
 
 
-                     <li><a href="map_school.php"> School</a></li> 
-                     
-                  </ul>
-               </div>
-            </div>
+					<li><a href="map_school.php"> School</a></li> 
+					
+				</ul>
+			</div>
+		</div>
 		<div class="row"> 
 
 			<div class="col-md-4 col-md-offset-4">
@@ -169,70 +170,70 @@ session_start();//session starts here
 		$std_edu = substr($std_edu, $position + 1);
 		// validando campos vazios
 		 if($std_guardian=='') // Se o não estiver logado voltar para login novamente
-        {  
-            echo"<script>alert('Please login to continue!')</script>"; 
-            echo"<script>window.open('../Logout.php','_self')</script>";  
+		 {  
+		 	echo"<script>alert('Please login to continue!')</script>"; 
+		 	echo"<script>window.open('../Logout.php','_self')</script>";  
             exit();//caso este passo nao seja valido ele retornara ao formulario  
         } 
-		if($std_name=='') 
-		{  
-			echo"<script>alert('Please enter the name')</script>";  
+        if($std_name=='') 
+        {  
+        	echo"<script>alert('Please enter the name')</script>";  
         	exit();//caso este passo nao seja valido ele retornara ao formulario  
         }
         if($std_birth=='') 
-		{  
-			echo"<script>alert('Please enter the Date of Birth')</script>";  
+        {  
+        	echo"<script>alert('Please enter the Date of Birth')</script>";  
         	exit();//caso este passo nao seja valido ele retornara ao formulario  
         }
         if($std_edu=='') 
-		{  
-			echo"<script>alert('Please enter the Education')</script>";  
+        {  
+        	echo"<script>alert('Please enter the Education')</script>";  
         	exit();//caso este passo nao seja valido ele retornara ao formulario  
         }
         if($std_grade=='') 
-		{  
-			echo"<script>alert('Please enter the Grade')</script>";  
+        {  
+        	echo"<script>alert('Please enter the Grade')</script>";  
         	exit();//caso este passo nao seja valido ele retornara ao formulario  
         }
         if($std_last=='') 
-		{  
-			echo"<script>alert('Please enter the Last year's situation')</script>";  
+        {  
+        	echo"<script>alert('Please enter the Last year's situation')</script>";  
         	exit();//caso este passo nao seja valido ele retornara ao formulario  
         }
 
         // Verificar usuario ja foi registrado no banco  
-    	$check_cpf_query="select * from students WHERE name='$std_name'AND birth='$std_birth' AND guardianUser='$std_guardian'";  
-    	$run_query=mysqli_query($dbcon,$check_cpf_query);
-    	if(mysqli_num_rows($run_query)>0)  
-    	{  
+        $check_cpf_query="select * from students WHERE name='$std_name'AND birth='$std_birth' AND guardianUser='$std_guardian'";  
+        $run_query=mysqli_query($dbcon,$check_cpf_query);
+        if(mysqli_num_rows($run_query)>0)  
+        {  
         	echo "<script>alert('Students $std_name is already exist in our database, Please try another one!')</script>";  
         	exit(); // retorna ao formulario
-    	}
+        }
     	//inserir usuario em banco de dados. 
-    	$insert_std="INSERT INTO `students`(`code`, `name`, `birth`, `grade`, `education`, `lastyear`, `guardianUser`)  VALUES ('','$std_name','$std_birth','$std_grade','$std_edu','$std_last','$std_guardian')";
+        $insert_std="INSERT INTO `students`(`code`, `name`, `birth`, `grade`, `education`, `lastyear`, `guardianUser`)  VALUES ('','$std_name','$std_birth','$std_grade','$std_edu','$std_last','$std_guardian')";
 
-    	if(mysqli_query($dbcon,$insert_std))  
-    	{  
+        if(mysqli_query($dbcon,$insert_std))  
+        {  
         	echo"<script>window.open('homeU.php','_self')</script>";  
-    	} else{
+        } else{
         	echo "Error: " . $insert_std . "<br>" . mysqli_error($dbcon);
-    	}
-    	mysqli_close($dbcon);  
+        }
+        mysqli_close($dbcon);  
 
     }
-?>
-<script type="text/javascript">
+    ?>
+    <script type="text/javascript">
 	// Switch Registe Students
 
-    
-    (function(angular) {
-      'use strict';
-      angular.module('switch_regStd', ['ngAnimate'])
-      .controller('GradeController', ['$scope', function($scope) {
-        $scope.items = ['Elementary School', 'Middle School', 'High School'];
+	
+	(function(angular) {
+		'use strict';
+		angular.module('switch_regStd', ['ngAnimate'])
+		.controller('GradeController', ['$scope', function($scope) {
+			$scope.items = ['Elementary School', 'Middle School', 'High School'];
     //$scope.selection = $scope.items[0];
 }]);
-  })(window.angular);
+	})(window.angular);
 
 
 </script>
