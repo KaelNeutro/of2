@@ -93,7 +93,7 @@ if(isset($_POST['login']))
         {
 
             $_SESSION['l_user']=$user_log;//here session is used and value of $user_email store in $_SESSION.
-            echo "<script>window.open('user/menuU.php','_self')</script>";
+            echo "<script>window.open('user/homeU.php','_self')</script>";
 
         }
         else

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="total">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS--> 
@@ -59,8 +59,8 @@
 
 
 
-                <li><a href="#">Contact Us</a></li> 
-                <li><a href="#">About Us</a></li> 
+                <li><a href="map_school.php"> School</a></li> 
+                
             </ul>
         </div>
     </div> 
@@ -80,7 +80,7 @@
                             <fieldset>
                                 <?php
                                 include("../database/db_conection.php");
-                                $a_user='06930189090';
+                                $a_user=$_SESSION['l_user'];
 
                                     $view_user_query="select * from user WHERE cpf='$a_user'";//select query for viewing students.
                                     
@@ -95,7 +95,7 @@
                                         $u_pass=$row[2];
                                         $u_birth=$row[3];
                                         $u_cep=$row[4];
-                                        $u_addr=$row[5];
+                                        $u_addr=addslashes($row[5]);
                                         $u_num=$row[6];
                                         $u_comp=$row[7];
                                         $u_dist=$row[8];
@@ -150,7 +150,7 @@
                                     </div>
 
                                     <input class="btn btn-lg btn-success btn-block" type="submit" value="Update" name="update" >  
-                                    <button class="btn btn-lg btn-danger btn-block center-block" type="button" onclick="window.location.href='menuU.php'">BACK</button>
+                                    
 
                                 </fieldset>  
                             </form>  
@@ -188,9 +188,9 @@ if(isset($_POST['update'])){
 
     if($std_cpf=='') // Se o não estiver logado voltar para login novamente
     {  
-        // echo"<script>alert('Please login to continue!')</script>"; 
-        // echo"<script>window.open('../Logout.php','_self')</script>";  
-        // exit();//caso este passo nao seja valido ele retornara ao formulario  
+        echo"<script>alert('Please login to continue!')</script>"; 
+        echo"<script>window.open('../Logout.php','_self')</script>";  
+        exit();//caso este passo nao seja valido ele retornara ao formulario  
     } 
     if($user_name=='')  // validando campos vazios
     {  

@@ -37,7 +37,7 @@ session_start();//session starts here
                             <fieldset>
                                 <div class="form-group">
                                     <h3> Do you really want to delete your account?</h3>
-                                    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='menuU.php'" >No, back to menu</button>
+                                    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='homeU.php'" >No, back to menu</button>
                                     <button class="btn btn-lg btn-danger btn-block" type="submit" name="delete">Yes, permanent</button>
                                 </div>
 

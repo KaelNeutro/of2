@@ -70,8 +70,8 @@ if($std_guardian=='') // Se o não estiver logado voltar para login novamente
 
 
 
-				<li><a href="#">Contact Us</a></li> 
-				<li><a href="#">About Us</a></li> 
+				<li><a href="map_school.php"> School</a></li> 
+				
 			</ul>
 		</div>
 	</div>

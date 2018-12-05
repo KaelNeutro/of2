@@ -1,4 +1,4 @@
-<html>  
+<html class="total">  
 <head lang="en">  
 
     <meta charset="UTF-8">
@@ -86,7 +86,7 @@
                                         <input class="form-control" placeholder="State" name="state" id="state" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control phone-ddd-mask" placeholder="Telephone" name="phone1" id="phone1" type="text" autofocus >  
+                                        <input class="form-control phone-ddd-mask" placeholder="Tellphone" name="phone1" id="phone1" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
                                         <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2" id="phone2" type="text" autofocus >  
@@ -139,7 +139,7 @@
                                         <input class="form-control" placeholder="State" name="stateSchool" id="stateSchool" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control phone-ddd-mask" placeholder="Telephone" name="phone1School" id="phone1School" type="text" autofocus >  
+                                        <input class="form-control phone-ddd-mask" placeholder="Tellphone" name="phone1School" id="phone1School" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
                                         <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2School" id="phone2School" type="text" autofocus >  

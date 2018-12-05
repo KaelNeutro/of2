@@ -5,22 +5,22 @@ session_start();//session starts here
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva -->  
-    <!-- Bootstrap-->  
-    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
-    <script src="..\bootstrap\js\bootstrap.js"></script>
-    <script src="..\bootstrap\js\bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Bootstrap--> 
+         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-     <!-- Jquery--> 
-    <script src="..\js\jquery.min.js"></script>
-    <script src="..\js\function.js"></script>
-    <!-- CSS--> 
-    <link type="text/css" rel="stylesheet" href="..\css\style.css">
+         <!-- Jquery--> 
+         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="..\js\jquery.min.js"></script>
+         <script src="..\js\function.js"></script>
+         <!-- CSS--> 
+         <link type="text/css" rel="stylesheet" href="..\css\style.css">
+         <link type="text/css" rel="stylesheet" href="..\bootstrap\css\bootstrap.css">
+         <link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
     <title>View students</title>
 </head>
 <style>
@@ -36,12 +36,54 @@ session_start();//session starts here
 
 <body>
 
-<div class="table-scrol">
-    <h1 align="center">All the Students</h1>
+<div >
+    
 
 <div class="container"><!--this is used for responsive display in mobile and other devices-->
+               <div class="row">
+               <div class="center-align">
+                  <ul class="nav ">
+                     <li><a href="#">Home</a></li> 
 
 
+                     <li><a href="#">Students</a>
+                        <ul class ="sub">
+                           <li><a href="reg_std.php"> Register </a></li> 
+                           <li><a href="alter_std.php"> Alter Data</a></li>
+                           <li><a href="view_std.php"> View or Remove </a></li>
+                        </ul>
+                     </li>
+
+
+                     <li><a href="#">Vacancies</a>
+                        <ul class ="sub">
+                           <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
+                           <li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
+                           <li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
+                           <li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
+                           <li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
+                        </ul>
+                     </li> 
+
+
+                     <li><a href="#">User</a>
+                        <ul class ="sub">
+                           <li><a href="alter_u.php" > Edit Account </a></li> 
+                           <li><a href="delfulluser.php"> Remove Account </a></li>
+
+                        </ul> 
+                     </li>
+
+
+
+                     <li><a href="map_school.php"> School</a></li> 
+                     
+                  </ul>
+               </div>
+            </div>
+            <div class="row">
+        <div class="table-scrol center-align">
+            <h1 align="center">All the Students</h1>
     <table class="table table-bordered table-responsive  table-striped" style="table-layout: fixed">
         <thead>
 
@@ -96,7 +138,7 @@ session_start();//session starts here
         <?php } ?>
 
     </table>
-        <button class="btn btn-lg btn-danger btn-block center-block" onclick="window.location.href='menuU.php'">BACK</button>
+        
         </div>
 </div>
 

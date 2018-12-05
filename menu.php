@@ -27,7 +27,7 @@
                                     if(mysqli_num_rows($run_query)<=0)  
                                     {  
                                         echo "<script>alert('No exist students')</script>";
-                                        echo"<script>window.open('menuU.php','_self')</script>"; 
+                                        echo"<script>window.open('homeU.php','_self')</script>"; 
                                         
                                     }
                                     $run=mysqli_query($dbcon,$view_students_query);//here run the sql query.
@@ -189,7 +189,7 @@ if(isset($_POST['register'.$cont.'Std'])){
         if(mysqli_query($dbcon,$update_user))  
         {  
             echo "<script>alert('UPDATE SUCCESSFUL')</script>";
-            echo"<script>window.open('MenuU.php','_self')</script>";  
+            echo"<script>window.open('homeU.php','_self')</script>";  
         } else{
             echo "Error: " . $update_user . "<br>" . mysqli_error($dbcon);
         }
@@ -201,7 +201,7 @@ if(isset($_POST['register'.$cont.'Std'])){
 ?>                      
 </fieldset>
 </form>
-<button class="btn btn-lg btn-danger btn-block center-block" onclick="window.location.href='menuU.php'">BACK</button>
+<button class="btn btn-lg btn-danger btn-block center-block" onclick="window.location.href='homeU.php'">BACK</button>
 </div>
 </div>
 </div>

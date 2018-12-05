@@ -1,6 +1,9 @@
  html {
   height:100%;
 }
+html.total{
+  height: 160%;
+}
 body{
   height:100%;
   color:#000 !important;
@@ -72,11 +75,12 @@ h1{
 .left{
   float: left;  
 }
-#mapa{
-  height: 64%;
+#mapa,#mapSchools{
+  height: 80%;
   width: 100%;
-  float: right;
-  margin-top: 48%;
+ position: absolute;
+ margin-top: 30px;
+  
 
 }
 

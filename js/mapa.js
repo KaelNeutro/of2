@@ -44,9 +44,9 @@ $(document).ready(function () {
 });	
 
 
+
 function initialize() {
-	
-     
+  
     var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
 	var options = {
 		zoom: 5,
@@ -64,9 +64,6 @@ function initialize() {
 	});
 	
 	marker.setPosition(latlng);
-
-
    
 }
-
 

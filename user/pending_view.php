@@ -71,8 +71,8 @@ session_start();//session starts here
 
 
 
-				<li><a href="#">Contact Us</a></li> 
-				<li><a href="#">About Us</a></li> 
+				<li><a href="map_school.php"> School</a></li> 
+				
 			</ul>
 		</div>
 	</div>

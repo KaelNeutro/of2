@@ -59,8 +59,8 @@
 
 
 
-                <li><a href="#">Contact Us</a></li> 
-                <li><a href="#">About Us</a></li> 
+                <li><a href="map_school.php"> School</a></li> 
+                
             </ul>
         </div>
     </div>  
@@ -82,7 +82,7 @@
                                     if(mysqli_num_rows($run_query)<=0)  
                                     {  
                                         echo "<script>alert('No exist students')</script>";
-                                        echo"<script>window.open('menuU.php','_self')</script>"; 
+                                        echo"<script>window.open('homeU.php','_self')</script>"; 
                                         
                                     }
                                     $run=mysqli_query($dbcon,$view_students_query);//here run the sql query.
@@ -244,7 +244,7 @@ if(isset($_POST['register'.$cont.'Std'])){
         if(mysqli_query($dbcon,$update_user))  
         {  
             echo "<script>alert('UPDATE SUCCESSFUL')</script>";
-            echo"<script>window.open('MenuU.php','_self')</script>";  
+            echo"<script>window.open('homeU.php','_self')</script>";  
         } else{
             echo "Error: " . $update_user . "<br>" . mysqli_error($dbcon);
         }
