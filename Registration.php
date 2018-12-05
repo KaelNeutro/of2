@@ -1,0 +1,348 @@
+<html>  
+<head lang="en">  
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva -->  
+    <!-- Bootstrap-->  
+    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
+    <script src="bootstrap\js\bootstrap.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Jquery--> 
+    <script src="js\jquery.min.js"></script>
+    <script src="js\jquery.maskedinput.js"></script>
+    <script src="js\function.js"></script>
+
+    <!-- Google Maps--> 
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBGwgKtk8lwTal0Ng_UkPU6JmqhDKtbmf0"></script>
+
+    <script type="text/javascript" src="js/mapa.js"></script>
+    <!-- CSS--> 
+    <link type="text/css" rel="stylesheet" href="css\style.css">
+    <title>Registration User</title>    
+</head>  
+
+<body>  
+
+    <div class="container"> <!-- FORMULARIO DE REGISTRO DE USUARIO-->
+        <div class="row"> 
+            <div class="col-md-4 col-md-offset-4" id="seg-div">
+                <div class="login-panel panel panel-success">  
+                    <div class="panel-heading">  
+                        <h3 class="panel-title">Registration</h3>  
+                    </div>
+                    <ul class="nav nav-pills "> <!--- ABAS DOS FORMULARIOS DE CADASTRO -->
+                        <li class="active"><a data-toggle="pill" href="#regUser">User</a></li>
+                        <li><a data-toggle="pill" href="#regSchool">School</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Formulario de Usuario -->
+                        <div id="regUser" class="panel-body tab-pane fade in active">  
+                            <form role="form" id="form_register_user" name="form_register_user" method="post" action="registration.php" >  
+                                <fieldset>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Username" name="name" id="name" type="text" autofocus>  
+                                    </div>  
+
+                                    <div class="form-group">  
+                                        <input class="form-control cpf-mask" placeholder="CPF" name="cpf" id="cpf" type="text"  autofocus>  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Password" name="pass" id="pass" type="password" value="" >  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Confirm Password" name="cpass" id="cpass" type="password" value="" >  
+                                    </div> 
+
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Date of Birth" name="birth" id="birth" type="date" autofocus>  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="CEP" name="cep" id="cep" type="text" autofocus>  
+                                        <input type="hidden" name="lat" id="lat" >
+                                         <input type="hidden" name="lng" id="lng" >   
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Address" name="address" id="address" type="text" autofocus >  
+                                    </div> 
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Number" name="number" id="number" type="tel" autofocus >  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Complement" name="compl" id="compl" type="text" autofocus >  
+                                    </div> 
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="District" name="district" id="district"  type="text" autofocus >  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="City" name="city" id="city" type="text" autofocus >  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="State" name="state" id="state" type="text" autofocus >  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control phone-ddd-mask" placeholder="Telephone" name="phone1" id="phone1" type="text" autofocus >  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2" id="phone2" type="text" autofocus >  
+                                    </div>
+
+                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="register" >  
+
+                                </fieldset>  
+                            </form>  
+                            <center></br><b>Already registered ?</b> </br><a href="login.php">Login here</a></center><!--for centered text-->  
+
+                        </div>
+                        <!-- Formulario de Escola -->
+                        <div id="regSchool" class="panel-body tab-pane fade">  
+                            <form role="form" id="form_register_school" name="form_register_school" method="post" action="registration.php" >  
+                                <fieldset>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Name School" name="nameSchool" id="nameSchool" type="text" autofocus>  
+                                    </div>  
+
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Code School" name="codeSchool" id="CodeSchool" type="text"  autofocus>  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Password" name="passSchool" id="passSchool" type="password" value="" >  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Confirm Password" name="cpassSchool" id="cpassSchol" type="password" value="" >  
+                                    </div> 
+
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="CEP" name="cepSchool" id="cepSchool" type="text" autofocus>  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Address" name="addressSchool" id="addressSchool" type="text" autofocus >  
+                                    </div> 
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Number" name="numberSchool" id="numberSchool" type="tel" autofocus >  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="Complement" name="complSchool" id="complSchool" type="text" autofocus >  
+                                    </div> 
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="District" name="districtSchool" id="districtSchool"  type="text" autofocus >  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="City" name="citySchool" id="citySchool" type="text" autofocus >  
+                                    </div>  
+                                    <div class="form-group">  
+                                        <input class="form-control" placeholder="State" name="stateSchool" id="stateSchool" type="text" autofocus >  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control phone-ddd-mask" placeholder="Telephone" name="phone1School" id="phone1School" type="text" autofocus >  
+                                    </div>
+                                    <div class="form-group">  
+                                        <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2School" id="phone2School" type="text" autofocus >  
+                                    </div>
+
+                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="registerSchool" >  
+
+                                </fieldset>  
+                            </form>  
+                            <center></br><b>Already registered ?</b> </br><a href="login.php">Login here</a></center>
+                        </div> 
+                    </div>  
+                </div>  
+            </div>
+            <div class="sem-div" id="map-div">
+                <div id="mapa" ></div>
+            </div>
+        </div> 
+   </div>  
+
+</body>  
+
+</html>  
+
+<?php  
+
+include("database/db_conection.php");//Conectando com o banco
+error_reporting(E_ALL);
+if(isset($_POST['register'])){  
+
+    $user_name=$_POST['name'];//aqui obtendo resultado da matriz post depois de enviar o formulário.
+    $user_cpf=$_POST['cpf'];  
+    $user_pass=$_POST['pass'];
+    $user_cpass=$_POST['cpass'];
+    $user_birth=$_POST['birth'];
+    $user_cep=$_POST['cep'];
+    $user_address= addslashes($_POST['address']);
+    $user_number=$_POST['number'];
+    $user_complement=$_POST['compl'];
+    $user_district=$_POST['district'];
+    $user_city=$_POST['city'];
+    $user_state=$_POST['state'];
+    $user_phone1=$_POST['phone1'];
+    $user_phone2=$_POST['phone2'];
+    $user_lat=$_POST['lat'];
+    $user_lng=$_POST['lng'];
+
+
+
+    if($user_name=='')  // validando campos vazios
+    {  
+
+        echo"<script>alert('Please enter the name')</script>";  
+        exit();//caso este passo nao seja valido ele retornara ao formulario  
+    }
+    if($user_cpf=='')  
+    {  
+        echo"<script>alert('Please enter the cpf')</script>";  
+        exit();  
+    }
+    if($user_pass=='')  
+    {  
+        echo"<script>alert('Please enter the password')</script>";  
+        exit();  
+    }
+    if($user_cpass=='')  
+    {  
+        echo"<script>alert('Please enter the password')</script>";  
+        exit();  
+    }
+    if($user_birth=='')  
+    {  
+        echo"<script>alert('Please enter the date of birth')</script>";  
+        exit();  
+    }
+    if($user_cep=='')  
+    {  
+        echo"<script>alert('Please enter the CEP')</script>";  
+        exit();  
+    }
+    if($user_number=='')  
+    {  
+        echo"<script>alert('Please enter the number')</script>";  
+        exit();  
+    }
+    if($user_phone1=='')  
+    {  
+        echo"<script>alert('Please enter the Phone 01-(DDD) XXXX-XXXX')</script>";  
+        exit();  
+    }
+
+    // Complemento e telefone 02 são itens opcionais, nao precisa verificar
+    //echo"<script>alert('Passei 02')</script>";
+    
+// Verificar usuario ja foi registrado no banco  
+    $check_cpf_query="select * from user WHERE cpf='$user_cpf'";  
+    $run_query=mysqli_query($dbcon,$check_cpf_query);  
+
+    if(mysqli_num_rows($run_query)>0)  
+    {  
+        //echo"<script>alert('Passei 03')</script>";
+        echo "<script>alert('User with CPF $user_cpf is already exist in our database, Please try another one!')</script>";  
+        exit(); // retorna ao formulario
+    }  
+    
+//inserir usuario em banco de dados.  
+    $insert_user="INSERT INTO `user`(`cpf`, `name`, `password`, `birth`, `cep`,`address`, `number`, `complement`, `district`, `city`, `state`, `phone1`, `phone2`) VALUES ('$user_cpf','$user_name','$user_pass','$user_birth','$user_cep','$user_address','$user_number','$user_complement','$user_district','$user_city','$user_state','$user_phone1','$user_phone2')"; 
+    //$insert_user="inserto into user (cpf,name,password,birth,cep,address,number,complement,district,city,state,phone1,phone2) VALUES ('".$user_cpf."','".$user_name."','".$user_pass."','".$user_birth."','".$user_cep."','".$user_address."','".$user_number."','".$user_complement."','".$user_district."','".$user_city."','".$user_state."','".$user_phone1."','".$user_phone2."')"; 
+
+    $insert_map="INSERT INTO `maps`(`code`, `id_user`, `lat`, `lng`) VALUES('','$user_cpf','$user_lat','$user_lng')";
+    
+    $map=mysqli_query($dbcon,$insert_map);
+    
+    if(mysqli_query($dbcon,$insert_user))  
+    {  
+
+        echo"<script>window.open('Welcome.php','_self')</script>";  
+    } else{
+        echo "Error: " . $insert_user . "<br>" . mysqli_error($dbcon);
+    }
+    mysqli_close($dbcon);
+
+} elseif (isset($_POST['registerSchool'])) {
+    # code...
+    $user_name=addslashes($_POST['nameSchool']);//aqui obtendo resultado da matriz post depois de enviar o formulário.
+    $user_codeS=$_POST['codeSchool'];  
+    $user_pass=$_POST['passSchool'];
+    $user_cpass=$_POST['cpassSchool'];
+    $user_cep=$_POST['cepSchool'];
+    $user_address= addslashes($_POST['addressSchool']);
+    $user_number=$_POST['numberSchool'];
+    $user_complement=$_POST['complSchool'];
+    $user_district=$_POST['districtSchool'];
+    $user_city=$_POST['citySchool'];
+    $user_state=$_POST['stateSchool'];
+    $user_phone1=$_POST['phone1School'];
+    $user_phone2=$_POST['phone2School'];
+
+
+
+    if($user_name=='')  // validando campos vazios
+    {  
+
+        echo"<script>alert('Please enter the name')</script>";  
+        exit();//caso este passo nao seja valido ele retornara ao formulario  
+    }
+    if($user_codeS=='')  
+    {  
+        echo"<script>alert('Please enter the Code')</script>";  
+        exit();  
+    }
+    if($user_pass=='')  
+    {  
+        echo"<script>alert('Please enter the password')</script>";  
+        exit();  
+    }
+    if($user_cpass=='')  
+    {  
+        echo"<script>alert('Please enter the password')</script>";  
+        exit();  
+    }
+
+    if($user_cep=='')  
+    {  
+        echo"<script>alert('Please enter the CEP')</script>";  
+        exit();  
+    }
+    if($user_number=='')  
+    {  
+        echo"<script>alert('Please enter the number')</script>";  
+        exit();  
+    }
+    if($user_phone1=='')  
+    {  
+        echo"<script>alert('Please enter the Phone 01-(DDD) XXXX-XXXX')</script>";  
+        exit();  
+    }
+    // Complemento e telefone 02 são itens opcionais, nao precisa verificar
+    //echo"<script>alert('Passei 02')</script>";
+    
+// Verificar usuario ja foi registrado no banco  
+    $check_codeS_query="select * from user WHERE code='$user_codeS'";  
+    $run_query=mysqli_query($dbcon,$check_codeS_query);  
+
+    if(mysqli_num_rows($run_query)>0)  
+    {  
+        //echo"<script>alert('Passei 03')</script>";
+        echo "<script>alert('User with Code $user_codeS is already exist in our database, Please try another one!')</script>";  
+        exit(); // retorna ao formulario
+    }  
+    
+//inserir usuario em banco de dados.  
+    $insert_user="INSERT INTO `school`(`code`, `name`, `password`, `cep`, `address`, `number`, `complement`, `district`, `city`, `state`, `phone1`, `phone2`) VALUES ('$user_codeS','$user_name','$user_pass','$user_cep','$user_address','$user_number','$user_complement','$user_district','$user_city','$user_state','$user_phone1','$user_phone2')"; 
+    //$insert_user="inserto into user (cpf,name,password,birth,cep,address,number,complement,district,city,state,phone1,phone2) VALUES ('".$user_codeS."','".$user_name."','".$user_pass."','".$user_birth."','".$user_cep."','".$user_address."','".$user_number."','".$user_complement."','".$user_district."','".$user_city."','".$user_state."','".$user_phone1."','".$user_phone2."')"; 
+
+    if(mysqli_query($dbcon,$insert_user))  
+    {  
+
+        echo"<script>window.open('Welcome.php','_self')</script>";  
+    } else{
+        echo "Error: " . $insert_user . "<br>" . mysqli_error($dbcon);
+    }
+    mysqli_close($dbcon);
+}
+
+?>  
