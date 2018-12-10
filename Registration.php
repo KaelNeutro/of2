@@ -64,8 +64,6 @@
                                     </div>
                                     <div class="form-group">  
                                         <input class="form-control" placeholder="CEP" name="cep" id="cep" type="text" autofocus>  
-                                        <input type="hidden" name="lat" id="lat" >
-                                         <input type="hidden" name="lng" id="lng" >   
                                     </div>  
                                     <div class="form-group">  
                                         <input class="form-control" placeholder="Address" name="address" id="address" type="text" autofocus >  
@@ -184,8 +182,7 @@ if(isset($_POST['register'])){
     $user_state=$_POST['state'];
     $user_phone1=$_POST['phone1'];
     $user_phone2=$_POST['phone2'];
-    $user_lat=$_POST['lat'];
-    $user_lng=$_POST['lng'];
+ 
 
 
 
@@ -249,9 +246,9 @@ if(isset($_POST['register'])){
     $insert_user="INSERT INTO `user`(`cpf`, `name`, `password`, `birth`, `cep`,`address`, `number`, `complement`, `district`, `city`, `state`, `phone1`, `phone2`) VALUES ('$user_cpf','$user_name','$user_pass','$user_birth','$user_cep','$user_address','$user_number','$user_complement','$user_district','$user_city','$user_state','$user_phone1','$user_phone2')"; 
     //$insert_user="inserto into user (cpf,name,password,birth,cep,address,number,complement,district,city,state,phone1,phone2) VALUES ('".$user_cpf."','".$user_name."','".$user_pass."','".$user_birth."','".$user_cep."','".$user_address."','".$user_number."','".$user_complement."','".$user_district."','".$user_city."','".$user_state."','".$user_phone1."','".$user_phone2."')"; 
 
-    $insert_map="INSERT INTO `maps`(`code`, `id_user`, `lat`, `lng`) VALUES('','$user_cpf','$user_lat','$user_lng')";
     
-    $map=mysqli_query($dbcon,$insert_map);
+    
+   
     
     if(mysqli_query($dbcon,$insert_user))  
     {  

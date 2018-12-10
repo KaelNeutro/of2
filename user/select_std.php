@@ -45,7 +45,7 @@ if(mysqli_num_rows($run)<=0)
             <div class="row">
                <div class="center-align">
                   <ul class="nav ">
-                     <li><a href="#">Home</a></li> 
+                     <li><a href="homeU.php">Home</a></li> 
 
 
                      <li><a href="#">Students</a>

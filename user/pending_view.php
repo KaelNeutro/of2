@@ -1,13 +1,13 @@
 <?php
 session_start();//session starts here
 
-// $std_guardian=$_SESSION['l_user'];
-// if($std_guardian=='') // Se o não estiver logado voltar para login novamente
-// {  
-// 	echo"<script>alert('Please login to continue!')</script>"; 
-// 	echo"<script>window.open('../Logout.php','_self')</script>";  
-//     exit();//caso este passo nao seja valido ele retornara ao formulario  
-// }
+$std_guardian=$_SESSION['l_user'];
+if($std_guardian=='') // Se o não estiver logado voltar para login novamente
+{  
+	echo"<script>alert('Please login to continue!')</script>"; 
+	echo"<script>window.open('../Logout.php','_self')</script>";  
+    exit();//caso este passo nao seja valido ele retornara ao formulario  
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +38,7 @@ session_start();//session starts here
 	<div class="row">
 		<div class="center-align">
 			<ul class="nav ">
-				<li><a href="#">Home</a></li> 
+				<li><a href="homeU.php">Home</a></li> 
 
 
 				<li><a href="#">Students</a>
@@ -96,8 +96,8 @@ session_start();//session starts here
 
         <?php
         include("../database/db_conection.php");
-        $std='21';
-        $view_students_query="SELECT c.code, c.request_date, a.name,b.grade,b.education FROM pendency c INNER JOIN vacancies b ON (c.vacancy = b.code) INNER JOIN school a ON (b.school = a.code) WHERE c.situation='pending' AND c.students='$std'";//select query for viewing students.
+        $std=$_SESSION['l_std'];
+        $view_students_query="SELECT c.code, c.request_date, a.name,b.grade,b.education FROM pendency c INNER JOIN vacancies b ON (c.vacancy=b.code) INNER JOIN school a ON (b.school = a.code) WHERE c.situation='pending' AND c.students='$std'";//select query for viewing students.
         $run=mysqli_query($dbcon,$view_students_query);//here run the sql query.
 
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.
