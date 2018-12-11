@@ -60,7 +60,8 @@
 
 
 
-                <li><a href="map_school.php"> School </a></li> 
+                <li><a href="map_school.php"> School</a></li>  
+<li style="background-color: red;"><a href="../Logout.php"> Logout </a></li>
                 
             </ul>
         </div>
@@ -89,15 +90,13 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
           };
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Local Atual');
-          infoWindow.open(map);
+          
           map.setCenter(pos);
           var marker = new google.maps.Marker({
             position: pos,
             title: "Sua localização",
             map: map,
-            icon: '../img/marcador1.PNG'
+            icon: '../img/marcador1.PNG',
         });
 
           map.setCenter(pos);

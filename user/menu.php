@@ -30,38 +30,33 @@
                 <li><a href="homeU.php">Home</a></li> 
 
 
-                <li><a href="#">Students</a>
+                <li><a href="#">Vacancies</a>
                     <ul class ="sub">
-                        <li><a href="reg_std.php"> Register </a></li> 
-                        <li><a href="alter_std.php"> Alter Data</a></li>
-                        <li><a href="view_std.php"> View or Remove </a></li>
+                        <li><a href="reg_vac.php"> Register </a></li> 
+                        <li><a href="alter_vac.php"> Alter Data</a></li>
+                        <li><a href="view_vac.php"> View or Remove </a></li>
                     </ul>
                 </li>
 
 
-                <li><a href="#">Vacancies</a>
+                <li><a href="#">Students Registry</a>
                     <ul class ="sub">
-                        <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
-                        <li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
-                        <li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
-                        <li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
-                        <li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
+                        
+                        <li><a href="pending_view.php">Pending</a></li>
+                        <li><a href="accepted_view.php">Accepted</a></li>
+                        <li><a href="declined_view.php">Declined</a></li>
                     </ul>
                 </li> 
 
 
-                <li><a href="#">User</a>
+                <li><a href="#">School</a>
                     <ul class ="sub">
-                        <li><a href="alter_u.php" > Edit Account </a></li> 
-                        <li><a href="delfulluser.php"> Remove Account </a></li>
+                        <li><a href="alter_sch.php" > Edit Account </a></li> 
+                        <li><a href="delfullschool.php"> Remove Account </a></li>
 
                     </ul> 
                 </li>
-
-
-
-                <li><a href="menu.php" id="mapschool">Contact Us</a></li> 
-                
+                <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li>
             </ul>
         </div>
     </div>  

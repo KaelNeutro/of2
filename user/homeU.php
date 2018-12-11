@@ -60,7 +60,8 @@
 
 
 
-                <li><a href="menu.php" id="mapschool">Contact Us</a></li> 
+                <li><a href="map_school.php"> School</a></li>  
+<li style="background-color: red;"><a href="../Logout.php"> Logout </a></li>
                 
             </ul>
         </div>
