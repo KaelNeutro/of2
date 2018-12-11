@@ -17,7 +17,7 @@ include("../database/db_conection.php");
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva -->  
-        <!-- CSS--> 
+    <!-- CSS--> 
     <link type="text/css" rel="stylesheet" href="..\css\style.css">
     <link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
     <!-- Bootstrap--> 
@@ -55,7 +55,7 @@ include("../database/db_conection.php");
 
                 <li style="width: 180px;"><a href="#">Students Registry</a>
                     <ul class ="sub">
-                        
+
                         <li style="width: 180px;"><a href="pending_view.php">Pending</a></li>
                         <li style="width: 180px;"><a href="accepted_view.php">Accepted</a></li>
                         <li style="width: 180px;"><a href="declined_view.php">Declined</a></li>
@@ -76,75 +76,19 @@ include("../database/db_conection.php");
     </div>
     
     <div class="row">
-        <div class="table-scrol center-align">
-        <h1 align="center">Vacancies Pending</h1>
-    <?php
-           $gradeDB = "SELECT a.grade, a.education FROM vacancies a INNER JOIN pendency b ON (a.code = b.vacancy) WHERE school='$sch_dp' AND b.situation = 'pending'   GROUP by 1,2 ORDER BY a.education, a.grade";
-           $runS = mysqli_query($dbcon,$gradeDB );
-           while($row=mysqli_fetch_array($runS))
-           {
-            $gr=$row[0];
-            $ed=$row[1];
-
-           
-           
-    ?>
-    <h3 align="center"> <?php echo $gr." - ".$ed; ?> </h3>
-    <table class="table table-bordered table-responsive  table-striped" style="table-layout: fixed">
-        <thead>
-        <tr>
-
-            
-            <th>Request</th>
-            <th>Students</th>
-            <th>District</th>
-            <th>Phone</th>
-            <th>Phone</th>
-            <th>Last year</th>
-            <th style="border-right:0px;"></th>
-            <th style="border-left: 0px;"></th>
-            </tr>
-        </thead>
-
-        <?php
+          <div class="" style="height: 200px;">
+        <div id="" class="col-md-8 col-md-offset-2" style="margin-top: 70px;">
+          <table><td><img src="../img/logo.png"></td> <td><h4 style="color:white; text-align: center;">"Bem vindo ao Vagas Escolares!
+Nossa missão é facilitar a procura de vagas, tendo como público alvo a população, que encaram filas imensas e em determinadas ocasiões não encontram a vaga desejada. Os usuários cadastrados terão acesso à todas escolas da sua região e participarão do processo de obtenção das vagas disponíveis. As escolas terão como função disponibilizar ao sistema as vagas disponíveis."
+</h4></td></table>
+          
         
-        
-        $view_students_query="SELECT c.code, c.request_date, a.name,d.district,d.phone1,d.phone2,a.lastyear FROM pendency c INNER JOIN vacancies b ON (c.vacancy = b.code) INNER JOIN students a ON (c.students = a.code) INNER JOIN user d ON (a.guardianUser = d.cpf) WHERE c.situation='pending' AND b.school='$sch_dp' AND b.grade='$gr' AND b.education='$ed' ORDER by c.request_date ";//select query for viewing students.
-        $run=mysqli_query($dbcon,$view_students_query);//here run the sql query.
+          
+        </div>
 
-        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.
-        {
-            $code=$row[0];
-            $date_req=$row[1];
-            $std=addslashes($row[2]);
-            $dis=addslashes($row[3]);
-            $p1=$row[4];
-            $p2=$row[5];
-            $last=$row[6];
-
-
-        ?>
-
-        <tr>
-<!--here showing results in the table -->
-            <td><?php echo $date_req;?></td>
-            <td><?php echo $std;  ?></td>
-            <td><?php echo $dis;  ?></td>
-            <td><?php echo $p1;  ?></td>
-            <td><?php echo $p2;  ?></td>
-            <td><?php echo $last;  ?></td>
-            <td><a href="accepted.php?ac=<?php echo $code ?>"><button class="btn btn-success">Accept</button></a></td> 
-            <td><a href="declined.php?de=<?php echo $code ?>"><button class="btn btn-danger">refusal</button></a></td> 
-        </tr>
-
-        <?php } ?>
-
-    </table>
-        <?php } ?>
-        
     </div>
-       
-</div>
+
+    </div>
 
 
 </body>

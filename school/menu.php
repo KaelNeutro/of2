@@ -21,7 +21,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwgKtk8lwTal0Ng_UkPU6JmqhDKtbmf0">
 </script> -->
-<title>Alter Students Data</title>
+<title>menu</title>
 </head>
 <body class="container">
     <div class="row">
@@ -39,12 +39,12 @@
                 </li>
 
 
-                <li><a href="#">Students Registry</a>
+                <li style="width: 180px;"><a href="#">Students Registry</a>
                     <ul class ="sub">
                         
-                        <li><a href="pending_view.php">Pending</a></li>
-                        <li><a href="accepted_view.php">Accepted</a></li>
-                        <li><a href="declined_view.php">Declined</a></li>
+                        <li style="width: 180px;"><a href="pending_view.php">Pending</a></li>
+                        <li style="width: 180px;"><a href="accepted_view.php">Accepted</a></li>
+                        <li style="width: 180px;"><a href="declined_view.php">Declined</a></li>
                     </ul>
                 </li> 
 

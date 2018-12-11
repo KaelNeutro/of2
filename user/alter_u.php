@@ -20,7 +20,7 @@
 
 
 
-    <title>Alter Students Data</title>
+    <title>Alter User Data</title>
 </head>
 <body class="container">
     <div class="row">

@@ -274,10 +274,11 @@ div.modal-foote{
 
 table {
   max-width: 100%;
-  background-color: transparent;
+/*  background-color: transparent;*/
   border-collapse: collapse;
   border-spacing: 0;
   font-family: arial;
+  background-color: #fff;
 }
 
 .table {
@@ -285,7 +286,7 @@ table {
   width: 100%;
   margin-bottom: 20px;
   margin-top: 10px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .table th,

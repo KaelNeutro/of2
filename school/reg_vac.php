@@ -1,27 +1,33 @@
 <?php
 session_start();//session starts here
-include("../database/db_conection.php");
-$Vac_guardian=$_SESSION['l_user'];
-if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
+
+
+$v = isset($_SESSION['l_user'])? 'S' : 'N';
+if($v=='N') // Se o não estiver logado voltar para login novamente
 {  
-    echo"<script>alert('Please login to continue!')</script>"; 
-    echo"<script>window.open('../Logout.php','_self')</script>";  
+	echo"<script>alert('Please login to continue!')</script>"; 
+	echo"<script>window.open('../Logout.php','_self')</script>";  
     exit();//caso este passo nao seja valido ele retornara ao formulario  
-}
+} 
+$sch_dp=$_SESSION['l_user'];
+include("../database/db_conection.php");
 ?>
 
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva --> 
-	<!-- Bootstrap --> 
-	<link type="text/css" rel="stylesheet" href="..\bootstrap\css\bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva -->  
+	<!-- CSS--> 
+	<link type="text/css" rel="stylesheet" href="..\css\style.css">
+	<link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
+	<!-- Bootstrap--> 
+	<link href="..\bootstrap\css\bootstrapCDN.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- CSS--> 
-	<link type="text/css" rel="stylesheet" href="..\css\style.css">
 	<!-- Jquery--> 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="..\js\jquery.min.js"></script>
 	<script src="..\js\function.js"></script>
 	<!-- Angular -->
@@ -32,8 +38,36 @@ if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
 </head>
 <body id="rgVac">
 	<div class="container"> <!-- FORMULARIO DE REGISTRO DE ESTUDANTES-->
-		<div class="row"> 
+		<div class="row">
+			<div class="center-align">
+				<ul class="nav ">
+					<li><a href="homeU.php">Home</a></li> 
+					<li><a href="#">Vacancies</a>
+						<ul class ="sub">
+							<li><a href="reg_vac.php"> Register </a></li> 
+							<li><a href="alter_vac.php"> Alter Data</a></li>
+							<li><a href="view_vac.php"> View or Remove </a></li>
+						</ul>
+					</li>
+					<li style="width: 180px;"><a href="#">Students Registry</a>
+						<ul class ="sub">
 
+							<li style="width: 180px;"><a href="pending_view.php">Pending</a></li>
+							<li style="width: 180px;"><a href="accepted_view.php">Accepted</a></li>
+							<li style="width: 180px;"><a href="declined_view.php">Declined</a></li>
+						</ul>
+					</li> 
+					<li><a href="#">School</a>
+						<ul class ="sub">
+							<li><a href="alter_sch.php" > Edit Account </a></li> 
+							<li><a href="delfullschool.php"> Remove Account </a></li>
+						</ul> 
+					</li>
+					<li style="background-color: red;"><a href="../Logout.php"> Logout </a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row"> 
 			<div class="col-md-4 col-md-offset-4">
 				<div class="login-panel panel panel-success">  
 					<div class="panel-heading">  
@@ -93,7 +127,7 @@ if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
 							<input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="registerVac" >
 						</fieldset>
 					</form>
-					<button class="btn btn-lg btn-danger center-block" onclick="window.location.href='menuS.php'">BACK</button>
+					
 				</div>
 			</div>
 		</div>
@@ -103,29 +137,29 @@ if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
 
 
 <?php
-	
-	error_reporting(E_ALL);
-	if(isset($_POST['registerVac'])){
 
-		$Vac_edu= $_POST['eduVac1'];  
-		$Vac_grade=$_POST['gradeVac1'];
-		$Vac_qtd=$_POST['qtd_Vac'];
-		
+error_reporting(E_ALL);
+if(isset($_POST['registerVac'])){
 
-		$position = strpos($Vac_edu,":");
-		$Vac_edu = substr($Vac_edu, $position + 1);
+	$Vac_edu= $_POST['eduVac1'];  
+	$Vac_grade=$_POST['gradeVac1'];
+	$Vac_qtd=$_POST['qtd_Vac'];
+
+
+	$position = strpos($Vac_edu,":");
+	$Vac_edu = substr($Vac_edu, $position + 1);
 		// validando campos vazios
-		
+
 		if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
-        {  
-        	echo"<script>alert('Please login to continue!')</script>"; 
-        	echo"<script>window.open('../Logout.php','_self')</script>";  
+		{  
+			echo"<script>alert('Please login to continue!')</script>"; 
+			echo"<script>window.open('../Logout.php','_self')</script>";  
 	        exit();//caso este passo nao seja valido ele retornara ao formulario  
 	        
 	    }
-		if($Vac_edu=='') 
-		{  
-			echo"<script>alert('Please enter the Education')</script>";  
+	    if($Vac_edu=='') 
+	    {  
+	    	echo"<script>alert('Please enter the Education')</script>";  
         	exit();//caso este passo nao seja valido ele retornara ao formulario  
         }
         if($Vac_grade=='') 
@@ -140,9 +174,9 @@ if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
 	        
 	    }
 	    if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
-        {  
-        	echo"<script>alert('Please login to continue!')</script>"; 
-        	echo"<script>window.open('../Logout.php','_self')</script>";  
+	    {  
+	    	echo"<script>alert('Please login to continue!')</script>"; 
+	    	echo"<script>window.open('../Logout.php','_self')</script>";  
 	        exit();//caso este passo nao seja valido ele retornara ao formulario  
 	        
 	    }
@@ -154,27 +188,27 @@ if($Vac_guardian=='') // Se o não estiver logado voltar para login novamente
 	    {  
         //echo"<script>alert('Passei 03')</script>";
 	    	echo "<script>alert('$Vac_grade do $Vac_edu is already exist in our database, Please try another one!')</script>";  
-       		echo"<script>window.open('reg_vac.php','_self')</script>";  
+	    	echo"<script>window.open('reg_vac.php','_self')</script>";  
        		exit();// retorna ao formulario
        	} 
 
     	//inserir usuario em banco de dados. 
-    $insert_Vac="INSERT INTO `vacancies`(`code`, `education`, `grade`, `quantity`, `del`, `school`) VALUES ('','$Vac_edu','$Vac_grade','$Vac_qtd','0','$Vac_guardian')";
+       	$insert_Vac="INSERT INTO `vacancies`(`code`, `education`, `grade`, `quantity`, `del`, `school`) VALUES ('','$Vac_edu','$Vac_grade','$Vac_qtd','0','$Vac_guardian')";
 
-    if(mysqli_query($dbcon,$insert_Vac))  
-    {  
-    	echo"<script>window.open('MenuS.php','_self')</script>";  
-    } else{
-    	echo "Error: " . $insert_Vac . "<br>" . mysqli_error($dbcon);
-    }
-    mysqli_close($dbcon);  
+       	if(mysqli_query($dbcon,$insert_Vac))  
+       	{  
+       		echo"<script>window.open('MenuS.php','_self')</script>";  
+       	} else{
+       		echo "Error: " . $insert_Vac . "<br>" . mysqli_error($dbcon);
+       	}
+       	mysqli_close($dbcon);  
 
-}
-?>
-<script type="text/javascript">
+       }
+       ?>
+       <script type="text/javascript">
 	// Switch Registe Students
 
-(function(angular) {
+	(function(angular) {
 		'use strict';
 		angular.module('switch_regVac', ['ngAnimate'])
 		.controller('GradeController', ['$scope', function($scope) {

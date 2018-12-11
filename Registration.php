@@ -168,7 +168,7 @@ include("database/db_conection.php");//Conectando com o banco
 error_reporting(E_ALL);
 if(isset($_POST['register'])){  
 
-    $user_name=$_POST['name'];//aqui obtendo resultado da matriz post depois de enviar o formulário.
+    $user_name=addslashes($_POST['name']);//aqui obtendo resultado da matriz post depois de enviar o formulário.
     $user_cpf=$_POST['cpf'];  
     $user_pass=$_POST['pass'];
     $user_cpass=$_POST['cpass'];

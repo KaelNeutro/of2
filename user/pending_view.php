@@ -135,7 +135,7 @@ if($std_guardian=='') // Se o não estiver logado voltar para login novamente
         <?php } ?>
 
     </table>
-    <button class="btn btn-lg btn-danger  center-block" onclick="window.location.href='homeU.php'">BACK</button>
+    
 </div>
 </div>
 </div>

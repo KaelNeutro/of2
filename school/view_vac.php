@@ -1,62 +1,85 @@
 <?php
 session_start();//session starts here
 
-include("../database/db_conection.php");
-$sch_sch=$_SESSION['l_user'];  
-if($sch_sch=='') // Se o não estiver logado voltar para login novamente
+
+$v = isset($_SESSION['l_user'])? 'S' : 'N';
+if($v=='N') // Se o não estiver logado voltar para login novamente
 {  
     echo"<script>alert('Please login to continue!')</script>"; 
     echo"<script>window.open('../Logout.php','_self')</script>";  
     exit();//caso este passo nao seja valido ele retornara ao formulario  
 } 
+$sch_dp=$_SESSION['l_user'];
+include("../database/db_conection.php");
 ?>
 
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva -->  
-    <!-- Bootstrap-->  
-    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
-    <script src="..\bootstrap\js\bootstrap.js"></script>
-    <script src="..\bootstrap\js\bootstrap.min.js"></script>
-
+    <!-- CSS--> 
+    <link type="text/css" rel="stylesheet" href="..\css\style.css">
+    <link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
+    <!-- Bootstrap--> 
+    
+    <link href="..\bootstrap\css\bootstrapCDN.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!---->
-    -->
     <!-- Jquery--> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="..\js\jquery.min.js"></script>
     <script src="..\js\function.js"></script>
-    <!-- CSS--> 
-    <link type="text/css" rel="stylesheet" href="..\css\style.css">
-    <title>View Vacancies</title>
+    <title>View Declined</title>
 </head>
-<style>
-    .login-panel {
-        margin-top: 150px;
-    }
-    .table {
-        margin-top: 50px;
-
-    }
-
-</style>
-
-<body>
-
-<div class="table-scrol">
-    <h1 align="center">All the Vacancies</h1>
-
-<div class="container"><!--this is used for responsive display in mobile and other devices-->
 
 
-    <table class="table table-bordered table-responsive  table-striped" style="table-layout: fixed">
-        <thead>
+<body class="container">
 
-        <tr>
+    <div class="row">
+        <div class="center-align">
+            <ul class="nav ">
+                <li><a href="homeU.php">Home</a></li> 
+
+
+                <li><a href="#">Vacancies</a>
+                    <ul class ="sub">
+                        <li><a href="reg_vac.php"> Register </a></li> 
+                        <li><a href="alter_vac.php"> Alter Data</a></li>
+                        <li><a href="view_vac.php"> View or Remove </a></li>
+                    </ul>
+                </li>
+                <li style="width: 180px;"><a href="#">Students Registry</a>
+                    <ul class ="sub">
+                        
+                        <li style="width: 180px;"><a href="pending_view.php">Pending</a></li>
+                        <li style="width: 180px;"><a href="accepted_view.php">Accepted</a></li>
+                        <li style="width: 180px;"><a href="declined_view.php">Declined</a></li>
+                    </ul>
+                </li> 
+
+
+                <li><a href="#">School</a>
+                    <ul class ="sub">
+                        <li><a href="alter_sch.php" > Edit Account </a></li> 
+                        <li><a href="delfullschool.php"> Remove Account </a></li>
+
+                    </ul> 
+                </li>
+                <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="table-scrol center-align">
+            <h1 align="center">Vacancies Declined</h1>
+            <table class="table table-bordered table-responsive  table-striped" style="table-layout: fixed">
+                <thead>
+
+                    <tr>
 
             <th>Education</th>
             <th>Grade</th>
@@ -94,8 +117,8 @@ if($sch_sch=='') // Se o não estiver logado voltar para login novamente
         <?php } ?>
 
     </table>
-        <button class="btn btn-lg btn-primary center-block" onclick="window.location.href='menuS.php'">BACK</button>
-        </div>
+    
+</div>
 </div>
 
 

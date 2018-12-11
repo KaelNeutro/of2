@@ -21,7 +21,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwgKtk8lwTal0Ng_UkPU6JmqhDKtbmf0">
 </script> -->
-<title>Alter Students Data</title>
+<title>HOME</title>
 </head>
 <body class="container">
     <div class="row">

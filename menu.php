@@ -201,7 +201,7 @@ if(isset($_POST['register'.$cont.'Std'])){
 ?>                      
 </fieldset>
 </form>
-<button class="btn btn-lg btn-danger btn-block center-block" onclick="window.location.href='homeU.php'">BACK</button>
+
 </div>
 </div>
 </div>

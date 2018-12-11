@@ -106,7 +106,7 @@ if(isset($_POST['login']))
         $run=mysqli_query($dbcon,$check_user);
         if(mysqli_num_rows($run))
         {
-            echo "<script>window.open('school/menuS.php','_self')</script>";
+            echo "<script>window.open('school/homeS.php','_self')</script>";
 
             $_SESSION['l_user']=$user_log;//here session is used and value of $user_email store in $_SESSION.
 
