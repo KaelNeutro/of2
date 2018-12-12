@@ -39,48 +39,48 @@ session_start();//session starts here
 <div >
     
 
-<div class="container"><!--this is used for responsive display in mobile and other devices-->
-               <div class="row">
-               <div class="center-align">
-                  <ul class="nav ">
-                     <li><a href="homeU.php">Home</a></li> 
+    <div class="container"><!--this is used for responsive display in mobile and other devices-->
+        <div class="row">
+           <div class="center-align">
+              <ul class="nav ">
+                 <li><a href="homeU.php">Home</a></li> 
 
 
-                     <li><a href="#">Students</a>
-                        <ul class ="sub">
-                           <li><a href="reg_std.php"> Register </a></li> 
-                           <li><a href="alter_std.php"> Alter Data</a></li>
-                           <li><a href="view_std.php"> View or Remove </a></li>
-                        </ul>
-                     </li>
+                 <li><a href="#">Students</a>
+                    <ul class ="sub">
+                       <li><a href="reg_std.php"> Register </a></li> 
+                       <li><a href="alter_std.php"> Alter Data</a></li>
+                       <li><a href="view_std.php"> View or Remove </a></li>
+                   </ul>
+               </li>
 
 
-                     <li><a href="#">Vacancies</a>
-                        <ul class ="sub">
-                           <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
-                           <li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
-                           <li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
-                           <li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
-                           <li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
-                        </ul>
-                     </li> 
+               <li><a href="#">Vacancies</a>
+                <ul class ="sub">
+                 <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
+                 <li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
+                 <li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
+                 <li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
+                 <li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
+             </ul>
+         </li> 
 
 
-                     <li><a href="#">User</a>
-                        <ul class ="sub">
-                           <li><a href="alter_u.php" > Edit Account </a></li> 
-                           <li><a href="delfulluser.php"> Remove Account </a></li>
+         <li><a href="#">User</a>
+            <ul class ="sub">
+               <li><a href="alter_u.php" > Edit Account </a></li> 
+               <li><a href="delfulluser.php"> Remove Account </a></li>
 
-                        </ul> 
-                     </li>
+           </ul> 
+       </li>
 
 
 
-                     <li><a href="map_sc.php"> School</a></li>  
-<li style="background-color: red;"><a href="../Logout.php"> Logout </a></li> 
-                     
-                  </ul>
-               </div>
+       <li><a href="map_sc.php"> School</a></li>  
+       <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li> 
+
+   </ul>
+</div>
             </div>
             <div class="row">
         <div class="table-scrol center-align">

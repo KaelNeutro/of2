@@ -200,7 +200,7 @@
       var map, places, infoWindow;
       var markers = [];
       var autocomplete;
-      var countryRestrict = {'country': 'us'};
+      var countryRestrict = {'country': 'br'};
       var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
       var hostnameRegexp = new RegExp('^https?://.+?/');
 
@@ -295,6 +295,7 @@
               title: "Sua localização",
               map: map,
               icon: '../img/marcador1.PNG',
+              
             });
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
