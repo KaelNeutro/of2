@@ -9,7 +9,7 @@ body{
   color:#000 !important;
   background-color:#008060 !important;
   position: relative; 
-  background: linear-gradient(to bottom, #008060   0%, #000000 100%);
+  background: white;
 }
 
 .white{color:#000 !important; background-color:#ffffff !important;}

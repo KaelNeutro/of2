@@ -71,9 +71,10 @@
  -->
     </div>  
     <div class="" style="height: 200px; " >
-        <div id="" class="col-md-8 col-md-offset-2" style="margin-top: 70px;">
-          <table><td><img src="../img/logo.png"></td> <td><h4 style="color:white; text-align: center;">"Bem vindo ao Vagas Escolares!
-Nossa missão é facilitar a procura de vagas, tendo como público alvo a população, que encaram filas imensas e em determinadas ocasiões não encontram a vaga desejada. Os usuários cadastrados terão acesso à todas escolas da sua região e participarão do processo de obtenção das vagas disponíveis. As escolas terão como função disponibilizar ao sistema as vagas disponíveis."
+        <div id="" class="col-md-8 col-md-offset-2" style="margin-top: 5px;">
+            <img style="padding-top: 50px; margin-left: 280px; " src="../img/logo.png">
+          <table><td ></td> <td style="padding-top: 50px;"><h4 style="color:white; text-align: justify;"><p style="margin-left: 15px; margin-top: 50px; ">Bem vindo ao Vagas Escolares!</p>
+<p style="margin-left: 10px;"">Nossa missão é facilitar a procura de vagas, tendo como público alvo a população, que encaram filas imensas e em determinadas ocasiões não encontram a vaga desejada. Os usuários cadastrados terão acesso à todas escolas da sua região e participarão do processo de obtenção das vagas disponíveis. As escolas terão como função disponibilizar ao sistema as vagas disponíveis.</p>
 </h4></td></table>
           
         
