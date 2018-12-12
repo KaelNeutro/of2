@@ -18,7 +18,7 @@ if (isset($_SESSION['l_user'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- tela respansiva --> 
     <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.css">
     <link type="text/css" rel="stylesheet" href="css\style.css">
-    <title>Login</title>
+    <title>Entrar</title>
 </head>
 <style>
 .login-panel {
@@ -32,7 +32,7 @@ if (isset($_SESSION['l_user'])){
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-success shadow-div">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Sign in</h3>
+                        <h3 class="panel-title">Entrar</h3>
                     </div>
                     <div class="panel-body">
                         <form role="form" method="post" action="login.php">
@@ -40,26 +40,26 @@ if (isset($_SESSION['l_user'])){
                                 <div class="funkyradio" id="t_radio" style="">
                                     <div class="form-group funkyradio-success" style=" float: left; ">
                                         <input  type="radio" name="tpuser" id="tpuser" value="user" checked >
-                                        <label for="tpuser" style="width: 142px;">Users</label>
+                                        <label for="tpuser" style="width: 150px;">Usuários</label>
                                     </div>
                                     <div class="divider" style="float: left;position: relative;width: 5px;height: 32px;"></div>
                                     <div class="form-group funkyradio-success" style="position: relative; float: left; width:auto; ">
                                         <input  type="radio" name="tpuser" id="tpschool" value="school">
-                                        <label for="tpschool" style="width: 147px;">School</label>
+                                        <label for="tpschool" style="width: 150px; margin-left: 20px; ">Escola</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group"  >
-                                    <input class="form-control" placeholder="login" name="log" type="text" autofocus>
+                                    <input class="form-control" placeholder="Entrar" name="log" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="pass" type="password" value="" autofocus>
+                                    <input class="form-control" placeholder="Senha" name="pass" type="password" value="" autofocus>
                                 </div>
 
-                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Login" name="login" >
+                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Entrar" name="login" >
 
                                 <!-- Ir para o formulario de cadastro -->
-                                <center></br><b>No account yet? </b> <br></b><a href="Registration.php">Sign up here!</a></center>
+                                <center></br><b>Não possui uma conta? </b> <br></b><a href="Registration.php">Cadastre-se aqui!</a></center>
                                 
                             </fieldset>
                         </form>
@@ -98,7 +98,7 @@ if(isset($_POST['login']))
         }
         else
         {
-            echo "<script>alert('User CPF or password is incorrect !')</script>";
+            echo "<script>alert('CPF ou senha incorretos!')</script>";
         }
     } else if($user_type == "school"){
         # code...
@@ -106,14 +106,14 @@ if(isset($_POST['login']))
         $run=mysqli_query($dbcon,$check_user);
         if(mysqli_num_rows($run))
         {
-            echo "<script>window.open('school/homeS.php','_self')</script>";
+            echo "<script>window.open('school/menuS.php','_self')</script>";
 
             $_SESSION['l_user']=$user_log;//here session is used and value of $user_email store in $_SESSION.
 
         }
         else
         {
-            echo "<script>alert('School Code or password is incorrect !')</script>";
+            echo "<script>alert('Código da escola ou senha incorretos!!')</script>";
         }
     }
 
