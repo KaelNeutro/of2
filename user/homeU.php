@@ -61,9 +61,14 @@
 
 
                 <li><a href="menu.php" id="mapschool">Fale Conosco</a></li> 
+
+                <li><a href="../Logout.php">Sair</a>                
+                </li>
                 
-            </ul>
+          
         </div>
+<!-- <h1><a href="Logout.php">Logout here</a> </h1>
+ -->
     </div>  
     <div class="" style="height: 200px; " >
         <div id="" class="col-md-8 col-md-offset-2" style="margin-top: 70px;">
