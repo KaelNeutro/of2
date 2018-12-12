@@ -27,7 +27,7 @@
     <div class="row">
         <div class="center-align">
             <ul class="nav ">
-                <li><a href="homeU.php">Home</a></li> 
+                <li><a href="homeS.php">Home</a></li> 
 
 
                 <li><a href="#">Vacancies</a>
