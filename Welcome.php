@@ -13,7 +13,7 @@ if(!$_SESSION['l_user'])
 <head>
 
     <title>
-        Registration
+        Registrar
     </title>
 </head>
 
@@ -24,7 +24,7 @@ echo $_SESSION['l_user'];
 ?>
 
 
-<h1><a href="Logout.php">Logout here</a> </h1>
+<h1><a href="Logout.php">Logout aqui</a> </h1>
 
 
 </body>

@@ -28,7 +28,7 @@ session_start();//session starts here
     <link type="text/css" rel="stylesheet" href="..\bootstrap\css\bootstrap.css">
     <link href="..\css\style.css" rel="stylesheet" id="bootstrap-css">
 
-	<title>Vacancies Accepted</title>
+	<title>Vacgas Aceitas</title>
 </head>
 <body class="container">
 
@@ -37,38 +37,39 @@ session_start();//session starts here
 			<ul class="nav ">
 				<li><a href="homeU.php">Home</a></li> 
 
-
-				<li><a href="#">Students</a>
-					<ul class ="sub">
-						<li><a href="reg_std.php"> Register </a></li> 
-						<li><a href="alter_std.php"> Alter Data</a></li>
-						<li><a href="view_std.php"> View or Remove </a></li>
-					</ul>
-				</li>
-
-
-				<li><a href="#">Vacancies</a>
-					<ul class ="sub">
-						<li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
-						<li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
-						<li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
-						<li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
-						<li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
-					</ul>
-				</li> 
+<li><a href="#">Estudantes</a>
+                    <ul class ="sub" style="background-color: white!important;">
+                        <li><a href="reg_std.php"> Registrar </a></li> 
+                        <li><a href="alter_std.php"> Alterar Dados</a></li>
+                        <li><a href="view_std.php"> Listar ou Remover </a></li>
+                    </ul>
+                </li>
 
 
-				<li><a href="#">User</a>
-					<ul class ="sub">
-						<li><a href="alter_u.php" > Edit Account </a></li> 
-						<li><a href="delfulluser.php"> Remove Account </a></li>
-						
-					</ul> 
-				</li>
+                <li><a href="#">Vagas</a>
+                    <ul class ="sub" style="background-color: white!important;">
+                        <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Pesquisar</a></li> 
+                        <li><a href="sl_pd_std.php?sit=pending">Pendentes</a></li>
+                        <li><a href="sl_pd_std.php?sit=accepted">Aprovadas</a></li>
+                        <li><a href="sl_pd_std.php?sit=canceled">Canceladas</a></li>
+                        <li><a href="sl_pd_std.php?sit=declined">Recusadas</a></li>
+                    </ul>
+                </li> 
+
+
+                <li><a href="#">Usuários</a>
+                    <ul class ="sub" style="background-color: white!important;">
+                        <li><a href="alter_u.php" > Editar Conta </a></li> 
+                        <li><a href="delfulluser.php"> Remover Conta </a></li>
+
+                    </ul> 
+                </li>
 
 
 
-				<li><a href="map_school.php"> School</a></li>  
+
+
+				<li><a href="map_school.php"> Escola</a></li>  
                 <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li> 
 				
 			</ul>
@@ -84,11 +85,11 @@ session_start();//session starts here
         <tr>
 
             
-            <th>Request</th>
-            <th>School</th>
-            <th>Grade</th>
-            <th>Education</th>
-            <th>Data Answer</th>
+            <th>Pedido</th>
+            <th>Escola</th>
+            <th>Grau</th>
+            <th>Educação</th>
+            <th>Resposta</th>
         </tr>
         </thead>
 
