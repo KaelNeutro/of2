@@ -24,7 +24,7 @@
     <script type="text/javascript" src="js/mapa.js"></script>
     <!-- CSS--> 
     <link type="text/css" rel="stylesheet" href="css\style.css">
-    <title>Registration User</title>    
+    <title>Registro de Usuário</title>    
 </head>  
 
 <body>  
@@ -34,11 +34,11 @@
             <div class="col-md-4 col-md-offset-4" id="seg-div">
                 <div class="login-panel panel panel-success">  
                     <div class="panel-heading">  
-                        <h3 class="panel-title">Registration</h3>  
+                        <h3 class="panel-title">Registro</h3>  
                     </div>
                     <ul class="nav nav-pills "> <!--- ABAS DOS FORMULARIOS DE CADASTRO -->
-                        <li class="active"><a data-toggle="pill" href="#regUser">User</a></li>
-                        <li><a data-toggle="pill" href="#regSchool">School</a></li>
+                        <li class="active"><a style="margin-left: 25px; background-color: #33C416;"  href="#regUser">Usuário</a></li>
+                        <li><a  style="margin-left: 25px; background-color: #33C416;"  href="#regSchool">Escola</a></li>
                     </ul>
                     <div class="tab-content">
                         <!-- Formulario de Usuario -->
@@ -46,55 +46,55 @@
                             <form role="form" id="form_register_user" name="form_register_user" method="post" action="registration.php" >  
                                 <fieldset>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Username" name="name" id="name" type="text" autofocus>  
+                                        <input class="form-control" placeholder="Nome de usuário" name="name" id="name" type="text" autofocus>  
                                     </div>  
 
                                     <div class="form-group">  
                                         <input class="form-control cpf-mask" placeholder="CPF" name="cpf" id="cpf" type="text"  autofocus>  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Password" name="pass" id="pass" type="password" value="" >  
+                                        <input class="form-control" placeholder="Senha" name="pass" id="pass" type="password" value="" >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Confirm Password" name="cpass" id="cpass" type="password" value="" >  
+                                        <input class="form-control" placeholder="Confirma senha" name="cpass" id="cpass" type="password" value="" >  
                                     </div> 
 
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Date of Birth" name="birth" id="birth" type="date" autofocus>  
+                                        <input class="form-control" placeholder="Data de nascimento" name="birth" id="birth" type="date" autofocus>  
                                     </div>
                                     <div class="form-group">  
                                         <input class="form-control" placeholder="CEP" name="cep" id="cep" type="text" autofocus>  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Address" name="address" id="address" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Endereço" name="address" id="address" type="text" autofocus >  
                                     </div> 
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Number" name="number" id="number" type="tel" autofocus >  
+                                        <input class="form-control" placeholder="Número" name="number" id="number" type="tel" autofocus >  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Complement" name="compl" id="compl" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Complemento" name="compl" id="compl" type="text" autofocus >  
                                     </div> 
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="District" name="district" id="district"  type="text" autofocus >  
+                                        <input class="form-control" placeholder="Bairro" name="district" id="district"  type="text" autofocus >  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="City" name="city" id="city" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Cidade" name="city" id="city" type="text" autofocus >  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="State" name="state" id="state" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Estado" name="state" id="state" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control phone-ddd-mask" placeholder="Tellphone" name="phone1" id="phone1" type="text" autofocus >  
+                                        <input class="form-control phone-ddd-mask" placeholder="Telefone" name="phone1" id="phone1" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2" id="phone2" type="text" autofocus >  
+                                        <input class="form-control cel-sp-mask" placeholder="Celular" name="phone2" id="phone2" type="text" autofocus >  
                                     </div>
 
-                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="register" >  
+                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="Cadastrar" name="register" >  
 
                                 </fieldset>  
                             </form>  
-                            <center></br><b>Already registered ?</b> </br><a href="login.php">Login here</a></center><!--for centered text-->  
+                            <center></br><b>Já possui conta ?</b> </br><a href="login.php">Entre aqui</a></center><!--for centered text-->  
 
                         </div>
                         <!-- Formulario de Escola -->
@@ -143,11 +143,11 @@
                                         <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2School" id="phone2School" type="text" autofocus >  
                                     </div>
 
-                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="registerSchool" >  
+                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="Cadastrar" name="registerSchool" >  
 
                                 </fieldset>  
                             </form>  
-                            <center></br><b>Already registered ?</b> </br><a href="login.php">Login here</a></center>
+                            <center></br><b>Já possui conta?</b> </br><a href="login.php">Entre Aqui</a></center>
                         </div> 
                     </div>  
                 </div>  
