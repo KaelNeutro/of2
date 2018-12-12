@@ -75,7 +75,7 @@ include("../database/db_conection.php");
                             <fieldset>
                                 <?php
                                 
-                                    $view_user_query="select * from school WHERE code='$a_user'";//select query for viewing students.
+                                    $view_user_query="select * from school WHERE code='$sch_dp'";//select query for viewing students.
                                     
                                     
                                     $run=mysqli_query($dbcon,$view_user_query);//here run the sql query.
