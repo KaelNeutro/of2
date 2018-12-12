@@ -24,49 +24,48 @@
 <title>Alter Students Data</title>
 </head>
 <body class="container" style="background-color: white!important;">
-    <div class="row" style="background-color: white;">
-        <div class="center-align">
-            <ul class="nav ">
-                <li><a href="#">Inicio</a></li> 
+           <div class="row">
+           <div class="center-align">
+              <ul class="nav ">
+                 <li><a href="homeU.php">Home</a></li> 
 
 
-                <li><a href="#">Estudantes</a>
-                    <ul class ="sub" style="background-color: white!important;">
-                        <li><a href="reg_std.php"> Registrar </a></li> 
-                        <li><a href="alter_std.php"> Alterar Dados</a></li>
-                        <li><a href="view_std.php"> Listar ou Remover </a></li>
-                    </ul>
-                </li>
+                 <li><a href="#">Students</a>
+                    <ul class ="sub">
+                       <li><a href="reg_std.php"> Register </a></li> 
+                       <li><a href="alter_std.php"> Alter Data</a></li>
+                       <li><a href="view_std.php"> View or Remove </a></li>
+                   </ul>
+               </li>
 
 
-                <li><a href="#">Vagas</a>
-                    <ul class ="sub" style="background-color: white!important;">
-                        <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Pesquisar</a></li> 
-                        <li><a href="sl_pd_std.php?sit=pending">Pendentes</a></li>
-                        <li><a href="sl_pd_std.php?sit=accepted">Aprovadas</a></li>
-                        <li><a href="sl_pd_std.php?sit=canceled">Canceladas</a></li>
-                        <li><a href="sl_pd_std.php?sit=declined">Recusadas</a></li>
-                    </ul>
-                </li> 
+               <li><a href="#">Vacancies</a>
+                <ul class ="sub">
+                 <li><a href="search_vacancy.php"> <span class="glyphicon glyphicon-search"> </span>Search</a></li> 
+                 <li><a href="sl_pd_std.php?sit=pending">Pending</a></li>
+                 <li><a href="sl_pd_std.php?sit=accepted">Accepted</a></li>
+                 <li><a href="sl_pd_std.php?sit=canceled">Canceled</a></li>
+                 <li><a href="sl_pd_std.php?sit=declined">Declined</a></li>
+             </ul>
+         </li> 
 
 
-                <li><a href="#">Usuários</a>
-                    <ul class ="sub" style="background-color: white!important;">
-                        <li><a href="alter_u.php" > Editar Conta </a></li> 
-                        <li><a href="delfulluser.php"> Remover Conta </a></li>
+         <li><a href="#">User</a>
+            <ul class ="sub">
+               <li><a href="alter_u.php" > Edit Account </a></li> 
+               <li><a href="delfulluser.php"> Remove Account </a></li>
 
-                    </ul> 
-                </li>
+           </ul> 
+       </li>
 
 
 
-                <li><a href="menu.php" id="mapschool">Fale Conosco</a></li> 
+       <li><a href="map_sc.php"> School</a></li>  
+       <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li> 
 
-                <li><a href="../Logout.php">Sair</a>                
-                </li>
-                
-          
-        </div>
+   </ul>
+</div>
+
 <!-- <h1><a href="Logout.php">Logout here</a> </h1>
  -->
     </div>  

@@ -70,7 +70,7 @@ $sit=$_GET['sit'];
 
 
 
-                     <li><a href="map_school.php"> School</a></li>  
+                     <li><a href="map_sc.php"> School</a></li>  
 <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li> 
                      
                   </ul>

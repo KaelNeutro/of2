@@ -69,7 +69,7 @@ session_start();//session starts here
 
 
 
-				<li><a href="map_school.php"> Escola</a></li>  
+				<li><a href="map_sc.php"> Escola</a></li>  
                 <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li> 
 				
 			</ul>

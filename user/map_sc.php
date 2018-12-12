@@ -148,7 +148,7 @@
 
 
 
-          <li><a href="map_school.php"> School</a></li>  
+          <li><a href="map_sc.php"> School</a></li>  
           <li style="background-color: red;"><a href="../Logout.php"> Logout </a></li>
 
         </ul>
@@ -254,19 +254,14 @@
             };
 
 
-        places.nearbySearch(search, function(text, status) {
+        
          
 
-          var search1 = {
-              location:pos,
-              radius:5000,
-              types: ['school'], 
-              pagetoken:"CuQD3wEAAGtk8pQU58KoKcZyyk6um0-Gvth_mM8ZUqj9g0ISC6pHpDXUISFENt1otHsOdPrt9gKBFQanB_Dvnfat2fclVDy-vo0MLj9j4PMKyAu-ImIHf4L-rE1HaidVYGw1p_vRvTD6AHyECHwlXVPSzJFGWu2DrGoIggzGnxf3peeRbPEtWsBDf48OcpOyL0qYj2HtfGLdt8M9BINoRpnMbLaPGTJ5gunjt7MZbgxN7TbPSE9kUerqvysnCuKKcoZC1aMjNncJG5benxttsCXEc0AGgfEXX4SuBM4BZXTAdcZVk2-OocCx96v-AY5oYW3BdDdUqZXem38K7xiFQlW-xJ9T1BGWHQkw_6AmTT_cf3k4wHUd0lxXS2zYKrMNLrf75nH95EqyoczcRwtaxpsH2sb37ljzezysUeYF90TmFFDFkreyrxCRCvyOlkXazXfSa7FguyioV6ngqAwUEvQlXbvZjTr-C-h_1Ri3eHUb-xLY16Onkq7sleVDGLzBRRsQ29fg7JYPAY5DxmI6oPSRr8oiCIIyz0bsqeNGDjXHi6aPqPxzj827IDCAOtm3vGsI_QsGSCavuMxvYLzhafM6TMPOH3P6LGKf-Fw013UPKNt6RYMaB0KkJAuETrUvO0J0LwDKSRIQTNE2aElTDY3PILhtv0D81RoUGWwQxjaka5FmHTmzzx5JzvjjLPw"
-            };
+      
 
         
 
-          places.nearbySearch(search1, function(results, status) {
+          places.nearbySearch(search, function(results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -291,7 +286,7 @@
             
             
           }
-          });
+      
         });
 
             map.setCenter(pos);
