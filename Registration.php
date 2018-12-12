@@ -37,8 +37,8 @@
                         <h3 class="panel-title">Registro</h3>  
                     </div>
                     <ul class="nav nav-pills "> <!--- ABAS DOS FORMULARIOS DE CADASTRO -->
-                        <li class="active"><a style="margin-left: 25px; background-color: #33C416;"  href="#regUser">Usuário</a></li>
-                        <li><a  style="margin-left: 25px; background-color: #33C416;"  href="#regSchool">Escola</a></li>
+                        <li class="active"><a style="margin-left: 5px; background-color: #33C416;"  href="#regUser">Usuário</a></li>
+                        <li><a  data-toggle="pill" href="#regSchool" style="margin-left: 5px; background-color: #33C416;">Escola</a></li>
                     </ul>
                     <div class="tab-content">
                         <!-- Formulario de Usuario -->
@@ -102,45 +102,46 @@
                             <form role="form" id="form_register_school" name="form_register_school" method="post" action="registration.php" >  
                                 <fieldset>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Name School" name="nameSchool" id="nameSchool" type="text" autofocus>  
+                                        <input class="form-control" placeholder="Nome da Escola" name="nameSchool" id="nameSchool" type="text" autofocus>  
                                     </div>  
 
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Code School" name="codeSchool" id="CodeSchool" type="text"  autofocus>  
+                                        <input class="form-control" placeholder="Coódigo da Escola
+                                        " name="codeSchool" id="CodeSchool" type="text"  autofocus>  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Password" name="passSchool" id="passSchool" type="password" value="" >  
+                                        <input class="form-control" placeholder="Senha" name="passSchool" id="passSchool" type="password" value="" >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Confirm Password" name="cpassSchool" id="cpassSchol" type="password" value="" >  
+                                        <input class="form-control" placeholder="Confirmar Senha" name="cpassSchool" id="cpassSchol" type="password" value="" >  
                                     </div> 
 
                                     <div class="form-group">  
                                         <input class="form-control" placeholder="CEP" name="cepSchool" id="cepSchool" type="text" autofocus>  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Address" name="addressSchool" id="addressSchool" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Endereço" name="addressSchool" id="addressSchool" type="text" autofocus >  
                                     </div> 
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Number" name="numberSchool" id="numberSchool" type="tel" autofocus >  
+                                        <input class="form-control" placeholder="Número" name="numberSchool" id="numberSchool" type="tel" autofocus >  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="Complement" name="complSchool" id="complSchool" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Complemento" name="complSchool" id="complSchool" type="text" autofocus >  
                                     </div> 
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="District" name="districtSchool" id="districtSchool"  type="text" autofocus >  
+                                        <input class="form-control" placeholder="Bairro" name="districtSchool" id="districtSchool"  type="text" autofocus >  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="City" name="citySchool" id="citySchool" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Cidade" name="citySchool" id="citySchool" type="text" autofocus >  
                                     </div>  
                                     <div class="form-group">  
-                                        <input class="form-control" placeholder="State" name="stateSchool" id="stateSchool" type="text" autofocus >  
+                                        <input class="form-control" placeholder="Estado" name="stateSchool" id="stateSchool" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control phone-ddd-mask" placeholder="Tellphone" name="phone1School" id="phone1School" type="text" autofocus >  
+                                        <input class="form-control phone-ddd-mask" placeholder="Telefone" name="phone1School" id="phone1School" type="text" autofocus >  
                                     </div>
                                     <div class="form-group">  
-                                        <input class="form-control cel-sp-mask" placeholder="Cell Phone" name="phone2School" id="phone2School" type="text" autofocus >  
+                                        <input class="form-control cel-sp-mask" placeholder="Celular" name="phone2School" id="phone2School" type="text" autofocus >  
                                     </div>
 
                                     <input class="btn btn-lg btn-success btn-block" type="submit" value="Cadastrar" name="registerSchool" >  
